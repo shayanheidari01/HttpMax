@@ -1,8 +1,7 @@
 __title__ = "HttpMax"
 __description__ = "Python HTTP Client for All."
-__url__ = "https://HttpMax.readthedocs.io"
-__version__ = "1.0"
-#__build__ = 0x022802
+__url__ = "https://github.com/shayanheidari01/HttpMax"
+__version__ = "1.1"
 __author__ = "Shayan Heidari"
 __author_email__ = "me@shayanheidari.info"
 __license__ = "Apache 2.0"
