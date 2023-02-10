@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: HttpMax
+Version: 1.0
+Summary: Python HTTP Client for All.
+Home-page: https://HttpMax.readthedocs.io
+Author: Shayan Heidari
+Author-email: me@shayanheidari.info
+License: Apache 2.0
+Project-URL: Documentation, https://github.com/shayanheidari01/HttpMax
+Project-URL: Source, https://github.com/shayanheidari01/HttpMax
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7, <4
+Description-Content-Type: text/markdown
+Provides-Extra: security
+Provides-Extra: socks
+Provides-Extra: use_chardet_on_py3
+License-File: LICENSE
+
+# HttpMax
+
+**HttpMax** is a simple, asynchronous, fast and beautiful HTTP library.
+
+```python
+import HttpMax
+import asyncio
+
+async def main():
+    r = await HttpMax.get('https://httpbin.org/basic-auth/user/pass', auth=('user', 'pass'))
+    r.status_code
+    >>>200
+    r.headers['content-type']
+    >>>'application/json; charset=utf8'
+    r.encoding
+    >>>'utf-8'
+    r.text
+    >>>'{"authenticated": true, ...'
+    r.json()
+    >>> {'authenticated': True, ...}
+
+asyncio.run(main())
+```
+
+HttpMax allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your `PUT` & `POST` data — but nowadays, just use the `json` method!
