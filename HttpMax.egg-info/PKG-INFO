@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: HttpMax
-Version: 1.0
+Version: 1.1
 Summary: Python HTTP Client for All.
-Home-page: https://HttpMax.readthedocs.io
+Home-page: https://github.com/shayanheidari01/HttpMax
 Author: Shayan Heidari
 Author-email: me@shayanheidari.info
 License: Apache 2.0
