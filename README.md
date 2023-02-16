@@ -12,7 +12,7 @@ async def main():
     print(r.headers['content-type'])
     print(r.encoding)
     print(r.text)
-    print(r.json())
+    print(await r.json())
 
 asyncio.run(main())
 ```
